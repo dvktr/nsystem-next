@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 
 import InputPublico from "../inputPublico";
-import Botao from "../botao"
+import Button from "../button"
 import { validarEmail, validarSenha } from '../../utils/validadores'
 
 import imagemEnvelope from "../../public/images/envelope.svg";
@@ -53,10 +53,10 @@ export default function Login() {
             exibirMensagemValiacao={senha && !validarSenha(senha)}
           />
 
-          <Botao
-            texto={"Login"}
+          <Button
+            text={"Login"}
             type="submit"
-            desabilitado={!validarFormulario()}
+            disable={!validarFormulario()}
           />
         </form>
 

@@ -6,7 +6,7 @@
 @mixin botaoInvertido {
   background-color: $branco;
   color: $corPrimaria;
-  border: 1px solid $corPrimaria;
+  border: 1px solid $branco;
 }
 
 .btn {
