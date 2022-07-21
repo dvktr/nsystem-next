@@ -1,0 +1,149 @@
+.containerCrachaFrente{
+  width: 260px;
+  margin: auto;
+  position: relative;
+  color: #ffffff;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.containerCrachaCostas{
+  width: 260px;
+  margin: auto;
+  position: relative;
+  color: #2c3a57;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.containerCrachaImage{
+  width: 100%;
+}
+
+.avatarCracha{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 46.75%;
+  left: 30%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+  width: 40%;
+  height: 35%;
+}
+
+.nomeCracha{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 28.7%;
+  left: 40%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+}
+
+.cargoCracha{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 23.5%;
+  font-size: 10px;
+  left: 42.7%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+}
+
+.localCracha{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 55.8%;
+  font-size: 14px;
+  left: 25.5%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+}
+
+.emailCracha{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 48.1%;
+  font-size: 14px;
+  left: 25.5%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+}
+
+.numeroCracha{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 40.1%;
+  font-size: 14px;
+  left: 25.5%;
+  transition: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+ul{
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.mobileTitle{
+  display: none;
+}
+
+.desktopTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  text-align: center;
+  max-width: 30px;
+  font-size: 50px;
+  font-family: $fontBold;
+  color: $corPrimaria;
+}
+
+@media screen and (max-width: $desktopBreakpoint) {
+  ul{
+    flex-direction: column;
+
+  }
+
+  .containerCrachaFrente{
+    width: 80%;
+    right: 6%;
+    margin: auto;
+    color: #ffffff;
+    padding-bottom: 3px;
+  }
+
+  .containerCrachaCostas{
+    width: 80%;
+    right: 6%;
+    margin: auto;
+    color: #ffffff;
+    padding-top: 6px;
+  }
+
+  .mobileTitle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $corPrimaria;
+    width: 100%;
+
+    font-size: 35px;
+    font-family: $fontBold;
+  }
+
+  .desktopTitle{
+    display: none;
+  }
+}
+
+
+
+
+
