@@ -155,8 +155,8 @@
 
 ul{
   display: flex;
+  height: 100%;
   flex-direction: row;
-  padding-top: 10px;
   margin: auto;
 }
 
@@ -194,7 +194,6 @@ ul{
     width: 80%;
     right: 6%;
     margin: auto;
-    color: #ffffff;
     padding-top: 6px;
   }
 

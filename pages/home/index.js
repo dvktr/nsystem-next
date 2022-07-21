@@ -1,5 +1,6 @@
 import Nav from '../../components/nav/index'
 import Cracha from "../../components/cracha/index"
+import ContraCheque from '../../components/contraCheque/index'
 
 import avatarImg from '../../public/images/avatar.svg'
 
@@ -71,6 +72,8 @@ export default function Home() {
         numero = {numero}
         avatar = {avatar}
       />
+
+      <ContraCheque/>
     </>
     
   );

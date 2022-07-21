@@ -21,8 +21,8 @@ export default function Nav({ navEmail = "tested" }) {
         <Image src={logo} alt="Logotipo" className="logoMobile" />
       </div>
 
-      <nav>
-        <ul>
+      <nav className="navTopo">
+        <ul className="ulTopo">
           <li className="logo">
             <Image src={logo} alt="Logotipo" />
           </li>
