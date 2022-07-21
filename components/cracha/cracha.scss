@@ -21,7 +21,6 @@
 
 .avatarCracha{
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
   bottom: 46.75%;
   left: 30%;
   transition: translate(-50%, -50%);
@@ -31,27 +30,56 @@
 }
 
 .nomeCracha{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 28.7%;
-  left: 40%;
-  transition: translate(-50%, -50%);
+  width: 50%;
+  height: 25px;
+  bottom: 28.2%;
+  left: 25%;
   text-align: center;
+}
+
+.nomeCracha h2{
+  max-width: 100%;
+  font-size: 11.2px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; // Quantidade de linhas
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
 }
 
 .cargoCracha{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 23.5%;
-  font-size: 10px;
-  left: 42.7%;
-  transition: translate(-50%, -50%);
+  width: 33%;
+  height: 4.2%;
+  bottom: 23%;
+  left: 33.6%;
   text-align: center;
 }
 
+.cargoCracha h2{
+  max-width: 100%;
+  font-size: 10px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; // Quantidade de linhas
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+
 .localCracha{
+  display: flex;
+  align-items: center;
+  justify-content: left;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 6%;
   bottom: 55.8%;
   font-size: 14px;
   left: 25.5%;
@@ -59,24 +87,68 @@
   text-align: center;
 }
 
+.localCracha h2{
+  max-width: 100%;
+  font-size: 10px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; // Quantidade de linhas
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+
 .emailCracha{
+  display: flex;
+  align-items: center;
+  justify-content: left;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 48.1%;
+  width: 60%;
+  height: 5%;
+  bottom: 55.8%;
   font-size: 14px;
   left: 25.5%;
   transition: translate(-50%, -50%);
   text-align: center;
+
+  bottom: 48.1%;
+  left: 25.5%;
+}
+
+.emailCracha h2{
+  max-width: 100%;
+  font-size: 10px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; // Quantidade de linhas
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
 }
 
 .numeroCracha{
+  display: flex;
+  align-items: center;
+  justify-content: left;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  bottom: 40.1%;
+  width: 60%;
+  height: 5%;
+  bottom: 55.8%;
   font-size: 14px;
   left: 25.5%;
   transition: translate(-50%, -50%);
   text-align: center;
+
+  bottom: 40.1%;
+  left: 25.5%;
+}
+
+.numeroCracha h2{
+  max-width: 100%;
+  font-size: 10px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; // Quantidade de linhas
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
 }
 
 

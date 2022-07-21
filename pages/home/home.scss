@@ -21,9 +21,19 @@ nav ul {
 }
 
 nav ul li {
+  display: flex;
+  flex-direction: row;
   text-align: center;
   width: 12em;
   padding-left: 50px;
+}
+
+nav ul li button{
+  margin: 12px;
+  font-family: $fontRegular;
+  background-color: $corFundo;
+  color: #fff;
+  border-radius: 15px;
 }
 
 nav ul li a {

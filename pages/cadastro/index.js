@@ -33,6 +33,23 @@ export default function Cadastro() {
   const [confirmacaoSenha, setConfirmacaoSenha] = useState("");
   const [estaSubmetendo, setEstaSubmetendo] = useState(false);
 
+  const consultar = async (chave) => {
+    try {
+      let stringEmail;
+      stringEmail = sessionStorage.getItem('email')
+      if(stringEmail != null){
+        Router.push('/home')
+      }
+    } catch (error) {
+      Router.push('/')
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    
+    consultar(); 
+  }
+
   const validarFormulario = () => {
     return (
       validarEmail(email) &&
@@ -42,14 +59,8 @@ export default function Cadastro() {
     );
   };
 
-  const addUser = async (e) => {
-    //e.preventDefault();
-    if (!validarFormulario()) {
-      return;
-    }
-    setEstaSubmetendo(true);
-    try {
-      if(avatar == null){
+  const userVerificado = async () => {
+    if(avatar == null){
         await Axios.post("http://localhost:3002/cadastro", {
           nome: nome,
           email: email,
@@ -59,7 +70,7 @@ export default function Cadastro() {
           console.log("Registrado");
           Router.push('/')
       });
-      } 
+      } else {
 
       await Axios.post("http://localhost:3002/cadastro", {
         nome: nome,
@@ -70,6 +81,27 @@ export default function Cadastro() {
         console.log("Registrado");
         Router.push('/')
       });
+    }
+  }
+
+  const addUser = async (e) => {
+    //e.preventDefault();
+    if (!validarFormulario()) {
+      return;
+    }
+    setEstaSubmetendo(true);
+    try {
+      await Axios.post('http://localhost:3002/seluser', {
+        email: email
+      }).then((res) => {
+        if(res.data.email != null) {
+          alert('Email ja cadastrado')
+        } else {
+          userVerificado();
+        }
+      })
+
+      
     } catch (error) {
       console.log(error);
     }

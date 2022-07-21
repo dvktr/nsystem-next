@@ -16,8 +16,21 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
-  const armazenar = (chave, valor) => {
-    localStorage.setItem(chave, valor);
+  const consultar = async (chave) => {
+    try {
+      let stringEmail;
+      stringEmail = sessionStorage.getItem('email')
+      if(stringEmail != null){
+        Router.push('/home')
+      }
+    } catch (error) {
+      Router.push('/')
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    
+    consultar(); 
   }
   
 
