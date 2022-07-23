@@ -11,6 +11,7 @@ export default function Cracha({
   numero = "",
   avatar = avatarDefault
 }){
+  let avataDefined = (avatar == null || avatar == undefined || avatar == "") ? avatarDefault : avatar;
   return(
     <>
      <h1 className="mobileTitle">Crachá Digital</h1>
@@ -20,7 +21,7 @@ export default function Cracha({
       <Image src={crachaFrente} className="containerCrachaImage"/>
       <div className="avatarCracha">
         <Image 
-          src={avatar}
+          src={avataDefined}
           alt="Logotipo"
           className="logoAvatar"
           layout="fill"

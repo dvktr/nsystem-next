@@ -2,15 +2,13 @@ import Nav from '../../components/nav/index'
 import Cracha from "../../components/cracha/index"
 import ContraCheque from '../../components/contraCheque/index'
 
-import avatarImg from '../../public/images/avatar.svg'
-
 import { useState } from "react";
 import Axios from 'axios'
 import Link from "next/link";
 import Router from 'next/router';
 
 export default function Home() {
-  const [avatar, setAvatar] = useState(avatarImg);
+  const [avatar, setAvatar] = useState('');
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [cargo, setCargo] = useState("");
@@ -72,6 +70,7 @@ export default function Home() {
         numero = {numero}
         avatar = {avatar}
       />
+      <div className="separaGuia"></div>
 
       <ContraCheque/>
     </>

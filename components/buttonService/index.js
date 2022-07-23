@@ -2,7 +2,7 @@ export default function Button({
   types = 'button',
   text,
   cor = 'primaria',
-  disable = false,
+  concluido = false,
   verifyClick
 }) {
 
@@ -10,7 +10,7 @@ export default function Button({
     <button
         type={types}
         className={`btn ${cor}`}
-        disabled={disable}
+        concluido={disable}
         onClick={verifyClick}  
     >
       {text}

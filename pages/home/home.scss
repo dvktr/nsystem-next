@@ -53,8 +53,21 @@ nav ul li a {
   display:none;
 }
 
+.separaGuia{
+  display: none;
+}
+
+.containerCC Button {
+  position: relative;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  top: 70%;
+  width: 10%;
+  height: 10%;
+}
+
 @media screen and (max-width: $desktopBreakpoint) {
-  nav{
+  .navTopo{
     display: none;
   } 
 
@@ -80,4 +93,10 @@ nav ul li a {
     top: -100px;
     
   }
+
+  .separaGuia{
+    display: block;
+    margin-top: 50%;
+  }
+
 }
