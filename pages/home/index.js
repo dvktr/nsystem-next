@@ -1,6 +1,8 @@
 import Nav from '../../components/nav/index'
 import Cracha from "../../components/cracha/index"
 import ContraCheque from '../../components/contraCheque/index'
+import ServiceDesk from '../../components/serviceDesk/index'
+
 
 import { useState } from "react";
 import Axios from 'axios'
@@ -42,13 +44,12 @@ export default function Home() {
       await Axios.post("http://localhost:3002/seluser", { //parei quando deu erro no axios "not found"
         email: stringEmail
       }).then((res) => {
-        console.log(res)
         setAvatar(res.data.avatar)
         setNome(res.data.nome)
         setEmail(res.data.email)
         setCargo((res.data.cargo)?.toUpperCase())
-        setLocal(res.data.local)
-        setNumero(res.data.numero)   
+        setLocal((res.data?.local)?.toUpperCase())
+        setNumero((res.data.numero)?.toUpperCase())   
       });
     } catch (error) {
       alert("Erro: " + error);
@@ -73,7 +74,13 @@ export default function Home() {
       <div className="separaGuia"></div>
 
       <ContraCheque/>
+
+      <div className="separaGuia"></div>
+
+      <ServiceDesk/>
     </>
+
+   
     
   );
 }

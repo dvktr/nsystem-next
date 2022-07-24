@@ -4,11 +4,11 @@ let avatarDefault = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iO
 import Image from "next/image";
 
 export default function Cracha({
-  nome= "DEFAULT",
-  cargo= "DEFAULT",
-  local = "sajhfg agskoçs agslkãsg ",
-  email = "",
-  numero = "",
+  nome= "n/a",
+  cargo= "n/a",
+  local = "n/a",
+  email = "n/a",
+  numero = "n/a",
   avatar = avatarDefault
 }){
   let avataDefined = (avatar == null || avatar == undefined || avatar == "") ? avatarDefault : avatar;

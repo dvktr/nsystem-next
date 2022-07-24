@@ -1,0 +1,239 @@
+.containerService{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  background-color: #D4D4D4;
+  margin: auto;
+}
+
+.containerService h1{
+  color: #242731;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.serviceContainerBg{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 80%;
+  height: 70%;
+  border-radius: 20px;
+}
+
+.serviceContainer{
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 20px;
+  
+}
+
+.serviceDesk{
+  color: white;
+  font-size: 15px;
+  padding: 20px;
+}
+
+.navService{
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  background-color: $corPrimaria;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.navService li {
+  margin: auto 8%;
+  font-size: 15px;
+  font-family: $fontBold;
+}
+
+.rowService{
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  background-color: white;
+
+  display: flex;
+  
+}
+
+.padraoRowService{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-line-clamp: 2; // Quantidade de linhas
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+
+.dataService{
+  width: 20%;
+  height: 80px;
+  color: $cinzaForte
+}
+
+.idService{
+  width: 20%;
+  height: 80px;
+  color: $corPrimaria;
+}
+
+.assuntoService{
+  width: 20%;
+  height: 80px;
+}
+
+.statusService{
+  width: 20%;
+  height: 80px;
+}
+
+.botaoServiceConcluido{
+  width: 20%;
+  height: 80px;
+}
+
+.botaoServicePendente{
+  width: 20%;
+  height: 80px;
+}
+
+.concluido{
+  display: none
+}
+
+.botaoServiceConcluido Button {
+  width: 60%;
+  height: 40px;
+  background-color: #d5fcd5;
+  color: rgb(0, 213, 0);
+}
+
+.botaoServicePendente Button {
+  width: 60%;
+  height: 40px;
+  background-color: #E3F0FF;
+  color: $corPrimaria;
+}
+
+.botaoCriarServico{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  min-height: 10%;
+  margin-bottom: 10px;
+  color: white;
+  background-color: rgb(0, 233, 0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 40px;
+
+  &:hover{
+    color: rgb(0, 233, 0);
+    background-color: white;
+  }
+}
+
+
+@media screen and (max-width: $desktopBreakpoint) {
+  .containerService{
+    margin-top: -50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navServiceData{
+    display: none;
+  }
+
+  .navServiceId{
+    display: none;
+  }
+
+  .dataService{
+    display: none;
+  }
+
+  .idService{
+    display: none;
+  }
+
+  .rowService{
+    width: 100%;
+  }
+
+  .botaoServiceConcluido{
+    width: 20%;
+    height: 80px;
+  }
+  
+  .botaoServicePendente{
+    width: 20%;
+    height: 80px;
+  }
+  
+  .botaoServiceConcluido Button {
+    width: 80%;
+    height: 40px;
+  }
+
+  .botaoServicePendente Button {
+    width: 80%;
+    height: 40px;
+  }
+
+  .botaoServiceConcluido{
+    width: 40%;
+    height: 80px;
+    display: flex;
+    font-size: 10px;
+
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .botaoServicePendente{
+    width: 40%;
+    height: 80px;
+    display: flex;
+    font-size: 10px;
+
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .assuntoService{
+    width: 33%;
+    height: 80px;
+    display: flex;
+    font-size: 12px;
+
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .statusService{
+    width: 33%;
+    height: 80px;
+  }
+
+ 
+  
+}
+

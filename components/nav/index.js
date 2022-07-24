@@ -31,11 +31,11 @@ export default function Nav({ navEmail = "tested" }) {
           </li>
 
           <li>
-            <a href="#product">Contra Cheque</a>
+            <a href="#contracheque">Contra Cheque</a>
           </li>
 
           <li>
-            <a href="#product">Service Desk</a>
+            <a href="#services">Service Desk</a>
           </li>
 
           <li>
