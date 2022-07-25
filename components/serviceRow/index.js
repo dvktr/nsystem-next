@@ -6,6 +6,7 @@ import Button from "../button";
 
 import Axios from 'axios'
 import Script from 'next/script'
+import Router from 'next/router'
 
 export default function ServiceRow({
   data="01.02.2021",
@@ -27,8 +28,12 @@ export default function ServiceRow({
     try {
       await Axios.put("http://localhost:3002/servicedesk", {
         email: stringEmail,
-        id: id
-      }).then();
+        id: id,
+        answer: "modificado"
+      }).then(async () => {
+        
+        Router.push('/concluiservice')
+      });
     } catch (error) {
       alert("Erro: " + error);
     }
@@ -56,14 +61,14 @@ export default function ServiceRow({
           />
           <h7>{textStatus}</h7>
         </div>
-        <div className="botaoServiceConcluido padraoRowService" style={{display: buttonC,}}>
-            <Button
-              text={buttonText}
-              cor="pendente"
-              disable="true"
-        />
-        </div>
 
+          <div className="botaoServiceConcluido padraoRowService" style={{display: buttonC,}}>
+              <Button
+                text={buttonText}
+                cor="pendente"
+                disable="true"
+          />
+        </div>
         <div className="botaoServicePendente padraoRowService" style={{display: buttonP,}}>
             <Button
               text={buttonText}

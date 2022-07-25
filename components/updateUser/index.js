@@ -52,9 +52,10 @@ getUser();
         cargo: cargo,
         local: local,
         numero: numero
-      }).then(
-        updateContraCheque()
-      );
+      }).then(() => {
+        updateContraCheque();
+        Router.push('/home#contracheque')
+      });
     } catch (error) {
       
     }

@@ -9,7 +9,7 @@ import { useState } from 'react';
 import Router from 'next/router'
 import Axios from 'axios'
 
-export default function CreateService({
+export default function ConcluiService({
     
 
 }) {
@@ -40,7 +40,7 @@ export default function CreateService({
         service: service,
         date: date,
         status: '0',
-        conclusion: conclusion
+        conclusion: conclusion,
       }).then(res => {
         console.log(res);
         Router.push('/home#services')

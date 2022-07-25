@@ -68,12 +68,7 @@ export default function Cadastro() {
       }).then(async () => {
         await Axios.post("http://localhost:3002/contracheque/cadastro", {
           email: email,
-        }).then(() => {
-          alert("Registrado");
-          Router.push("/");
-        });
-        alert("Registrado");
-        Router.push("/");
+        }).then();
       });
     } else {
       await Axios.post("http://localhost:3002/cadastro", {
@@ -81,18 +76,18 @@ export default function Cadastro() {
         email: email,
         senha: senha,
         avatar: avatar.preview,
-      }).then(async () => {
-        await Axios.post("http://localhost:3002/contracheque/cadastro", {
-          email: email,
-        }).then(() => {
-          alert("Registrado");
-          Router.push("/");
-        });
-        alert("Registrado");
-        Router.push("/");
-      });
+      }).then();
     }
   };
+
+  const addContraCheque = async () => {
+    await Axios.post("http://localhost:3002/contracheque/cadastro", {
+      email: email,
+    }).then((res) => {
+      console.log(res)
+      Router.push("/");
+    });
+  }
 
   const addUser = async (e) => {
     //e.preventDefault();
@@ -108,6 +103,7 @@ export default function Cadastro() {
           alert("Email ja cadastrado");
         } else {
           userVerificado();
+          addContraCheque();
         }
       });
     } catch (error) {

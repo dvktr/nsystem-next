@@ -22,7 +22,7 @@ export default function ContraCheque({}) {
   let vtCalc = (parseInt(vt) * 4.09625);
   let dterceiroCalc = (parseInt(dterceiro));
 
-  let salariolCalc = (salarioCalc + dterceiroCalc - faltasCalc - inssCalc - vaCalc - vtCalc)?.toFixed(2)
+  let salariolCalc = (salarioCalc + dterceiroCalc - faltasCalc - inssCalc - vaCalc - vtCalc).toFixed(2)
 
   const consultar = async (chave) => {
     try {
@@ -126,7 +126,21 @@ export default function ContraCheque({}) {
       <section className="containerCCMobile">
         <h1>Contra Cheque</h1>
         <div className="containerInfoMobile">
-          <CheckRollsMobile />
+          <CheckRollsMobile 
+            salarioRef = {salario}
+            salarioVenc = {salarioCalc}
+            faltaRef = {falta}
+            faltaDesc= {faltasCalc}
+            inssRef = {inss}
+            inssDesc = {inssCalc}
+            vtRef = {vt}
+            vtDesc = {vtCalc}
+            vaRef = {va}
+            vaDesc = {vaCalc}
+            dterceiroRef = "1"
+            dterceiroVenc = {dterceiro}
+            salariol = {salariolCalc}
+          />
           <Button
             types="submit"
             text="Baixar"

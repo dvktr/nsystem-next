@@ -43,7 +43,6 @@ export default function Nav({ navEmail = "tested" }) {
           </li>
 
           <li>
-            <h3>{navEmail}</h3>
             <Button
               text="Sair"
               type="submit"
